@@ -2,16 +2,10 @@ import re
 import datetime
 import pandas as pd
 
-print('[+]Informe o padrao a ser encontrado, exemplo:  hash:')
-term = input()
+term = 'hash:'
+file = 'hashes.txt'
 
-print('[+]Informe o nome do arquivo com os dados brutos, exemplo:  log.txt')
-file = input()
-
-print('[+]Informe o nome do arquivo que sera gerado os resultados,  exemplo:  result.txt')
-result = input()
-
-PATTERN = fr'(\b{term}\b[a-zA-Z0-9]+|\b{term}\s\b[a-zA-Z0-9]+)'
+PATTERN = fr'(\b{term}\b[a-zA-Z]+|\b{term}\s\b[a-zA-Z]+)'
 
 data_txt=''
 
@@ -32,4 +26,4 @@ df.columns = ["ID","RESULTS"]
 
 df = df.drop('ID', axis=1)
 
-df.to_csv(result, index=False)
+df.to_csv("result.txt", index=False)
