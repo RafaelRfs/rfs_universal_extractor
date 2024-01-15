@@ -1,5 +1,5 @@
 # RFS Universal File Extractor
- ## Extrator universal de dados brutos da RFS Productions
+ ##### (Extrator universal de dados brutos da RFS Productions)
 
 ### Requisitos:
  * Ter o python 3.9 instalado na maquina;
